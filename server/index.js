@@ -14,9 +14,12 @@ app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 
 app.set("view engine", "ejs");
+
+// Enable CORS for requests from 'https://home-bliss.vercel.app'
 app.use(
   cors({
     origin: "https://home-bliss.vercel.app",
+    credentials: true,
   })
 );
 
@@ -29,7 +32,5 @@ app.use("/api/user", userRoutes);
 app.use("/api/residency", residencyRoutes);
 
 app.get("/", (req, res) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.header("Access-Control-Allow-Credentials", true);
   res.send("<h1>HOMEPAGE</h1>");
 });
