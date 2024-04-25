@@ -31,7 +31,7 @@ exports.forgotpass = async (req, res) => {
       subject: `Password Reset`,
       text: link,
     });
-    console.log(info);
+
     return res.json({
       success: true,
       message: "Check Your Email for reset link",
@@ -43,7 +43,7 @@ exports.forgotpass = async (req, res) => {
 
 exports.resetpassword = async (req, res) => {
   const { id, token } = req.params;
-  console.log(req.params);
+
   const oldUser = await User.findOne({ _id: id });
   if (!oldUser) {
     return res.json({ status: "User Not Exists!!" });
@@ -61,7 +61,7 @@ exports.resetpassword = async (req, res) => {
 exports.resetPass = async (req, res) => {
   const { id, token } = req.params;
   const { password } = req.body;
-  console.log(password);
+
   const oldUser = await User.findOne({ _id: id });
   if (!oldUser) {
     return res.json({ status: "User Not Exists!!" });

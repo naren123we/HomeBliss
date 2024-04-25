@@ -3,8 +3,6 @@ const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const bcrypt = require("bcrypt");
 exports.createUser = async (req, res) => {
-  console.log("Creating a user");
-
   let { name, email, password } = req.body;
 
   const userExists = await User.findOne({
@@ -95,8 +93,7 @@ exports.login = async (req, res) => {
         expires: new Date(Date.now() + 2 * 60 * 60 * 1000),
         httpOnly: true,
       };
-      console.log("Logging in");
-      // console.log(res);
+
       return res.cookie("token", token, options).status(200).json({
         success: true,
         token,
@@ -147,7 +144,7 @@ exports.bookVisit = async (req, res) => {
 
 exports.getAllBookings = async (req, res) => {
   const { email } = req.body;
-  console.log(email, "getalllbookings");
+
   try {
     const user = await User.findOne({ email }, "bookedVisits");
     res.status(200).send(user.bookedVisits);
@@ -209,7 +206,6 @@ exports.toFav = async (req, res) => {
 
 exports.getAllFav = async (req, res) => {
   const { email } = req.body;
-  console.log(email, "getalllfav");
   try {
     const user = await User.findOne({ email }, "favResidenciesID");
     res.status(200).send(user.favResidenciesID);

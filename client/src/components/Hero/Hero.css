@@ -2,7 +2,7 @@
   color: white;
   position: relative;
   z-index: 1;
-  background-image: url("https://img.freepik.com/free-photo/3d-rendering-house-model_23-2150799783.jpg?t=st=1713604402~exp=1713608002~hmac=0fca82cda11678613453059af05408ce3ae511e304c23fe73f5f424ff7f10d3b&w=740");
+  background-image: url("./bgImage.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 2rem;

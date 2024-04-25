@@ -14,8 +14,6 @@ exports.createResidency = async (req, res) => {
     userEmail,
   } = req.body.data;
 
-  console.log(image);
-
   try {
     const user = await User.findOne({ email: userEmail });
 

@@ -8,11 +8,9 @@ import {
   AccordionItemState,
 } from "react-accessible-accordion";
 import "react-accessible-accordion/dist/fancy-example.css";
-import {
-  MdOutlineArrowDropDown,
-  MdOutlineArrowDropDownCircle,
-} from "react-icons/md";
+import { MdOutlineArrowDropDown } from "react-icons/md";
 import data from "../../utils/accordion.jsx";
+
 import "./Value.css";
 // Demo styles, see 'Styles' section below for some notes on use.
 
@@ -23,10 +21,7 @@ const Value = () => {
         {/* left side */}
         <div className="v-left">
           <div className="image-container">
-            <img
-              src="https://img.freepik.com/free-photo/3d-rendering-house-model_23-2150799783.jpg?t=st=1713604402~exp=1713608002~hmac=0fca82cda11678613453059af05408ce3ae511e304c23fe73f5f424ff7f10d3b&w=740"
-              alt=""
-            />
+            <img src="./bgImage.jpeg" alt="" />
           </div>
         </div>
 

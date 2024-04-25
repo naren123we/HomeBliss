@@ -170,7 +170,6 @@ export const createResidency = async (data, token) => {
         },
       }
     );
-    console.log(res, "hjih");
   } catch (error) {
     throw error;
   }
@@ -181,7 +180,7 @@ export const forgotpassword = async (email) => {
     const res = await api.post(`/user/forgot-password`, {
       email,
     });
-    console.log(res);
+
     return res;
   } catch (error) {
     throw error;

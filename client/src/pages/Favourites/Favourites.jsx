@@ -12,8 +12,6 @@ const Favourites = () => {
   const [filter, setFilter] = useState("");
   const { userDetails } = useContext(UserDetailContext);
 
-  console.log(data);
-
   if (isError) {
     return (
       <div className="wrapper">

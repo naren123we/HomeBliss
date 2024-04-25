@@ -12,8 +12,6 @@ const Bookings = () => {
   const [filter, setFilter] = useState("");
   const { userDetails } = useContext(UserDetailContext);
 
-  console.log(data);
-  console.log(userDetails?.bookings);
   if (isError) {
     return (
       <div className="wrapper">
@@ -44,8 +42,6 @@ const Bookings = () => {
             .includes(property._id)
         )
       : [];
-
-  console.log(booking.length);
 
   return (
     <div className="wrapper">

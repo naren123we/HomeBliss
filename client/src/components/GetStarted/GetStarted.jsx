@@ -1,9 +1,8 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./GetStarted.css";
-const GetStarted = () => {
-  const history = useNavigate();
 
+const GetStarted = () => {
   return (
     <div id="get-started" className="g-wrapper">
       <div className="paddings innerWidth g-container">
