@@ -5,6 +5,7 @@ const userRoutes = require("./routes/UserRoutes");
 const residencyRoutes = require("./routes/residencyRoute");
 const dbconnect = require("./config/database");
 const cookieParser = require("cookie-parser");
+const path = require("path");
 require("dotenv").config();
 
 const PORT = process.env.PORT || 3000;
